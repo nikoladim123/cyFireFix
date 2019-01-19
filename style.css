@@ -239,6 +239,7 @@ header button:hover{
 }
 
 .picOne{
+  margin-bottom: 1px;
   margin-right: -1px;
   background-image: url('img/mainImg/picOne.png');
   grid-row:1/2;
@@ -247,6 +248,7 @@ header button:hover{
 }
 
 .picTwo{
+  margin-bottom: 1px;
   margin-left: 1px;
   background-image: url('img/mainImg/picTwo.png');
   grid-row:1/2;
