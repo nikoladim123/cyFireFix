@@ -39,15 +39,7 @@
     <!-- desktop nav -->
     <nav id="navBarDesktop">
       <a href="#">Background Checks</a>
-      <div class="servicesDropDownBox">
-        <a href="#">Services</a>
-        <div class="servicesDropDown" id="dropd">
-          <a href="#">Background Checks</a> <br>
-          <a href="#">Investigations</a> <br>
-          <a href="#">Attorney Services</a> <br>
-          <a href="#">Claims</a>
-        </div>
-      </div>
+      <a href="#">Services</a>
       <a href="#">Process Service</a>
       <a href="#">Claims Adjusting</a>
       <div class="moreDropDownBox">
@@ -55,9 +47,14 @@
         <div class="moreDropDown" id="dropdOne">
           <a href="#">News</a>
           <a href="#">Contact</a>
-          <a href="#">About us</a>
-          <a href="#">Speaking Engagement</a>
-          <a href="#">Career</a>
+          <div class="aboutUsDrowDownHoverBox">
+            <a href="#">About us <span class="aboutUsArrow">&#x203A;</span> </a>
+            <div class="aboutUsDrowDown">
+              <a href="#">Speaking Engagement</a>
+              <a href="#">Career</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </nav>
@@ -538,6 +535,7 @@ function autoCar(){
 setInterval(function(){
   autoCar();
 },3000);
+// Sarvesh video play/pause functions
 $(window).scroll(function() {
     var top_of_element = $("#my-video").offset().top;
     var bottom_of_element = $("#my-video").offset().top + $("#my-video").outerHeight();
@@ -550,19 +548,8 @@ $(window).scroll(function() {
       $("#my-video").trigger('pause')
     }
 });
-// dropDown Services
-var servicesDropDownBox = document.getElementsByClassName('servicesDropDownBox')[0];
-var servicesDropDown = document.getElementsByClassName('servicesDropDown')[0];
 
-servicesDropDownBox.addEventListener('mouseenter',function(){
-  if(window.innerWidth>window.innerHeight){
-      servicesDropDown.style.display ="block";
-  }
-});
-servicesDropDownBox.addEventListener('mouseleave',function(){
-  servicesDropDown.style.display ="none";
-});
-// dropdown Manu
+// dropdown More
 var moreDropDownBox = document.getElementsByClassName('moreDropDownBox')[0];
 var moreDropDown = document.getElementsByClassName('moreDropDown')[0];
 moreDropDownBox.addEventListener('mouseenter',function(){
@@ -584,7 +571,20 @@ loginHoverBox.addEventListener('mouseenter',function(){
 loginHoverBox.addEventListener('mouseleave',function(){
   loginDropDownBox.style.display ="none";
 });
-
+// dropdown inside a dropdown menu
+var aboutUsArrow = document.getElementsByClassName('aboutUsArrow')[0];
+var aboutUsDrowDown = document.getElementsByClassName('aboutUsDrowDown')[0];
+var aboutUsDrowDownHoverBox = document.getElementsByClassName('aboutUsDrowDownHoverBox')[0];
+aboutUsDrowDownHoverBox.addEventListener('mouseenter',function(){
+  if(window.innerWidth>window.innerHeight){
+      aboutUsDrowDown.style.display ="block";
+      aboutUsArrow.style.transform = 'rotate(90deg)'
+  }
+});
+aboutUsDrowDownHoverBox.addEventListener('mouseleave',function(){
+  aboutUsDrowDown.style.display ="none";
+  aboutUsArrow.style.transform = 'rotate(0deg)'
+});
     </script>
   </body>
 </html>
