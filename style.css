@@ -418,6 +418,7 @@ input::placeholder{
 /*Inspired */
 
 .sectionInspired{
+  padding-top: 0.1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,7 +426,6 @@ input::placeholder{
       -ms-flex-pack: center;
           justify-content: center;
   height: 49.11vw;
-  border-bottom: 3.14vw solid #0f967f;
   background-color: black;
 }
 
@@ -462,7 +462,7 @@ input::placeholder{
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 10.37vw;
+  margin-top: 10.97vw;
 }
 
 .inspiredText{
