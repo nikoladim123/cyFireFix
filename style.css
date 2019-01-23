@@ -193,11 +193,26 @@ header button:hover{
   text-decoration: none;
   background-color: rgb(233,233,233);
 }
+.aboutUsDrowDownHoverBox{
+
+}
+#clickmee{
+  position: relative;
+  left: 1.3vw;
+  float: right;
+  display: inline-block;
+  width: 2vw;
+  height: 2vw;
+}
 .aboutUsDrowDown{
   display: none;
   background-color: white;
 }
 .aboutUsArrow{
+  margin-right: 1vw;
+  float: right;
+  font-size: 2vw;
+  font-weight: 900;
   display: inline-block;
 }
 

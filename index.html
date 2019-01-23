@@ -48,7 +48,7 @@
           <a href="#">News</a>
           <a href="#">Contact</a>
           <div class="aboutUsDrowDownHoverBox">
-            <a href="#">About us <span class="aboutUsArrow">&#x203A;</span> </a>
+            <a href="#">About us <span class="aboutUsArrow">&#x203A; </span><div id='clickmee'></div> </a>
             <div class="aboutUsDrowDown">
               <a href="#">Speaking Engagement</a>
               <a href="#">Career</a>
@@ -583,6 +583,9 @@ moreDropDownBox.addEventListener('mouseenter',function(){
 });
 moreDropDownBox.addEventListener('mouseleave',function(){
   moreDropDown.style.display ="none";
+  aboutUsDrowDown.style.display ="none";
+  aboutUsArrow.style.transform = 'rotate(0deg)';
+  clickmeModulo = 100;
 });
 // dropdown login
 var loginDropDownBox = document.getElementsByClassName('loginDropDownBox')[0];
@@ -598,17 +601,25 @@ loginHoverBox.addEventListener('mouseleave',function(){
 // dropdown inside a dropdown menu
 var aboutUsArrow = document.getElementsByClassName('aboutUsArrow')[0];
 var aboutUsDrowDown = document.getElementsByClassName('aboutUsDrowDown')[0];
+var clickmee = document.getElementById('clickmee');
 var aboutUsDrowDownHoverBox = document.getElementsByClassName('aboutUsDrowDownHoverBox')[0];
-aboutUsDrowDownHoverBox.addEventListener('mouseenter',function(){
-  if(window.innerWidth>window.innerHeight){
+var clickmeModulo = 100;
+clickmee.addEventListener('click',function(){
+  if(window.innerWidth>window.innerHeight && clickmeModulo%2 ===0){
       aboutUsDrowDown.style.display ="block";
       aboutUsArrow.style.transform = 'rotate(90deg)'
   }
+  if(window.innerWidth>window.innerHeight && clickmeModulo%2 ===1){
+      aboutUsDrowDown.style.display ="none";
+      aboutUsArrow.style.transform = 'rotate(0deg)';
+  }
+  clickmeModulo++;
 });
-aboutUsDrowDownHoverBox.addEventListener('mouseleave',function(){
-  aboutUsDrowDown.style.display ="none";
-  aboutUsArrow.style.transform = 'rotate(0deg)'
-});
+// aboutUsDrowDownHoverBox.addEventListener('mouseleave',function(){
+//   aboutUsDrowDown.style.display ="none";
+//   aboutUsArrow.style.transform = 'rotate(0deg)';
+//   clickmeModulo = 100;
+// });
     </script>
   </body>
 </html>
