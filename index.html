@@ -15,7 +15,7 @@
       <a href="#"><div class="logo" id="logo"></div></a>
       <div class="login" id="login">
         <div class="loginHoverBox">
-          <div class="loginDropDownBox" id="dropdLogIn">
+          <div class="loginDropDownBox mozilaDropFix" id="dropdLogIn">
             <a href="#">Background Investigations</a>
             <a href="#">Process Service</a>
             <a href="#">Claims Investigations</a>
@@ -61,25 +61,33 @@
 
     <main>
       <section class="sectionOne" id="scrollMeHere">
-        <div class="picOne">
+        <div class="picOne mozFixGrid">
           <p data-aos="zoom-in-up">Employment Background <br> Investigations</p>
           <p>National and internation pre and post employment screenings and <br>
           background checks/investigations. </p>
           <button type="button" name="button">Enter Here</button>
         </div>
-        <div class="picTwo">
+        <div class="picTwo mozFixGrid">
           <p data-aos="zoom-in-up">Comprehensive Claims <br> Investigations</p>
           <p>Providing cost-effective,results-based solutions for mitigating potential <br>
           fraud </p>
           <button type="button" name="button">Enter Here</button>
         </div>
-        <div class="picThree">
+        <div class="picThree mozFixGrid">
           <p data-aos="zoom-in-up">Claims Adjusting</p>
           <button type="button" name="button">Enter Here</button>
         </div>
-        <div class="picFour">
+        <div class="picFour mozFixGrid">
           <p data-aos="zoom-in-up">Process Services</p>
           <button type="button" name="button">Enter Here</button>
+        </div>
+      </section>
+
+      <section class="riskSolutions">
+        <h2>YOU HAVE RISK <span><b>WE HAVE SOLUTIONS</b> </span> </h2>
+        <div class="getStartedNowBox">
+          <p>New to Alliance?</p>
+          <button type="button" name="button">Get Started Now</button>
         </div>
       </section>
 
@@ -115,12 +123,12 @@
         </div>
         <div class="inspired">
           <div class=inspiredText>
-            <h1>Inspired</h1>
+            <div class="insiperTextImage"></div>
             <p>Mario Pecoraro is an entrepreneur,corporate visionary,
-            author and founder of Alliance Worldwide Investigative Group,Inc., a company specializing
-            in background screening and comprehensive claims investigations. Alliance has grown
-            into a natinal/international
-            firm with a variety of services customizable to any industry.
+            author and founder of Alliance Worldwide Investigative Group,Inc., which was founded in 2005.
+            the company,which specializes in background screening and insurance fraud
+            investigations,has grown into a natinal/international investigative firm <br> with a
+            variety of services including pre-employment screening.
             </p>
           </div>
           <div class="twenty">
@@ -410,8 +418,16 @@
     }
   }
 /*sticky top bar , you can delete any script without loosing response*/
+var mozilaDropFix = document.getElementsByClassName('mozilaDropFix')[0];
+var mozFixGrid = document.getElementsByClassName('mozFixGrid');
+
 window.onscroll = function() {myFunction()};
 function myFunction() {
+  if (navigator.userAgent.search("Firefox") >= 0) {
+    for (var i = 0; i < mozFixGrid.length -1; i++) {
+      mozFixGrid[i].style.minHeight = '25vh';
+    }
+}
     if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250 && document.documentElement.clientWidth > 700) {
         document.getElementById("header").style.height = "6vw";
         document.getElementById("logo").style.height = "4.9vw";
@@ -422,6 +438,10 @@ function myFunction() {
         document.getElementById("login").style.width = "28vw";
         document.getElementById("headerButton").style.marginTop = "-0.5vw";
         document.getElementById("headerButton").style.width = "50%";
+
+        if (navigator.userAgent.search("Firefox") >= 0) {
+          mozilaDropFix.style.width = '96.9%';
+      }
     } else if(document.body.scrollTop < 250 && document.documentElement.clientWidth > 700){
         document.getElementById("header").style.height = "16.07vw";
         document.getElementById("logo").style.height = "11.07vw";
@@ -432,6 +452,10 @@ function myFunction() {
         document.getElementById("login").style.width = "auto";
         document.getElementById("headerButton").style.marginTop = "1.77vw";
         document.getElementById("headerButton").style.width = "100%";
+
+        if (navigator.userAgent.search("Firefox") >= 0) {
+          mozilaDropFix.style.width = '103%';
+      }
     }
     if(window.innerWidth < window.innerHeight){
       document.getElementById("login").style.width = "auto";

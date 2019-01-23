@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,800,900');
+/* font-family: 'Raleway', sans-serif; */
 :root{
   --main-color:#0f967f;
   font-family: 'Raleway', sans-serif;
@@ -41,11 +43,14 @@ header{
   height: 16.64vw; /*16.64vw; original*/
   background-color: #0f967f;
   z-index: 2;
+  -webkit-transition: height 1s;
+  -o-transition: height 1s;
   transition: height 1s;
   z-index: 5;
 }
 
 header h1{
+  font-weight: 400;
   margin: 0;
   margin-left: 0.71vw;
   margin-right: 0.5vw;
@@ -99,6 +104,8 @@ header h1{
 }
 
 .logo{
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
   display: inline-block;
   position: relative;
@@ -114,7 +121,8 @@ header h1{
 header button{
   position: relative;
   z-index: 1;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: 0px solid black;
   background-color: white;
   color:#0f967f;
@@ -135,15 +143,19 @@ header button:hover{
   padding-left: 10.35%;
   padding-right: 10.35%;
   height: 3.92vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #navBarDesktop a{
   color:#0f967f;
   text-decoration: none;
-  font-weight: 900;
   font-size: 1.8vw;
 }
 
@@ -192,6 +204,7 @@ header button:hover{
 /* section one */
 .sectionOne{
   height: 52.89vw;
+  display: -ms-grid;
   display: grid;
   grid-auto-rows: 1fr 1fr;
   grid-auto-columns: 1fr 1fr;
@@ -210,9 +223,16 @@ header button:hover{
 .sectionOne div{
   position: relative;
   color:white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-bottom:4.23vw;
   padding-top: 3.3vw;
   padding-left: 3vw;
@@ -242,7 +262,11 @@ header button:hover{
   margin-bottom: 1px;
   margin-right: -1px;
   background-image: url('img/mainImg/picOne.png');
+  -ms-grid-row:1;
+  -ms-grid-row-span:1;
   grid-row:1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-column: 1/2;
   background-size: 100% 100% ;
 }
@@ -251,14 +275,22 @@ header button:hover{
   margin-bottom: 1px;
   margin-left: 1px;
   background-image: url('img/mainImg/picTwo.png');
+  -ms-grid-row:1;
+  -ms-grid-row-span:1;
   grid-row:1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
   background-size: 100% 100% ;
 }
 
 .picThree{
   background-image: url('img/mainImg/picThree.png');
+  -ms-grid-row:2;
+  -ms-grid-row-span:1;
   grid-row:2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-column: 1/2;
   margin-top: -1px;
   margin-right: -1px;
@@ -267,17 +299,58 @@ header button:hover{
 
 .picFour{
   background-image: url('img/mainImg/mainFour.png');
+  -ms-grid-row:2;
+  -ms-grid-row-span:1;
   grid-row:2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
   margin-top: -1px;
   margin-left: 1px;
   background-size: 100% 100% ;
 }
-/* Section risk */
+/* riskSolutions riskSolutions */
+.riskSolutions{
+  display: flex;
+  height: 26.17vw;
+  align-items: center;
+  justify-content: center;
+}
+.riskSolutions h2{
+  margin-right: 2.22vw;
+  color: var(--main-color);
+  font-size: 3.3vw;
+  font-weight: 100;
+}
+.riskSolutions span{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+.getStartedNowBox{
+  position: relative;
+  margin-bottom: 2vw;
+}
+.getStartedNowBox p{
+  font-size: 1.7vw;
+  margin: 0;
+  margin-bottom: 0.5vw;
+  text-align: center;
+}
+.getStartedNowBox button{
+  font-weight: 800;
+  font-size: 2.1vw;
+  background-color: white;
+  border: 1px solid var(--main-color);
+  width: 24.44vw;
+  height: 5.4vw;
+}
+/* Section risk/claimgame download/form button */
 .sectionRisk{
   padding-top: 0.1px;
   color: white;
   height: 26.17vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-image:url('img/riskBG.jpg');
   background-size: 100% 200%;
@@ -308,6 +381,15 @@ input{
   font-size: 1vw;
   font-weight: 500;
 }
+input::-webkit-input-placeholder{
+  color:white;
+}
+input:-ms-input-placeholder{
+  color:white;
+}
+input::-ms-input-placeholder{
+  color:white;
+}
 input::placeholder{
   color:white;
 }
@@ -336,9 +418,13 @@ input::placeholder{
 /*Inspired */
 
 .sectionInspired{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  height: 40vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 49.11vw;
   border-bottom: 3.14vw solid #0f967f;
   background-color: black;
 }
@@ -346,30 +432,37 @@ input::placeholder{
 .claimGame{
   position: relative;
   height: 40vw;
-  width: 38vw;
+  width: 26.66vw;
   margin-top: 1px;
 }
 .claimGameCut{
   position: relative;
-  width: 18.58vw;
-  height: 29.7vw;
+  width: 15.11vw;
+  height: 24.07vw;
   background-image: url('img/claimGameCut.jpg');
   background-size: 100% 100%;
   margin-left: 50%;
-  left: -9.29vw;
-  margin-top: 6vw;
+  left: -7.555vw;
+  margin-top: 14.44vw;
 }
 
 .inspired{
-  background-color: white;
+  background: linear-gradient(135deg, rgba(47,127,114,1) 0%, rgba(203,221,209,1) 100%);
   position: relative;
   color:#0f967f;
-  width: 65vw;
-  padding-left: 4.21vw;
+  width: 73.33vw;
+  padding-left: 6.21vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: stretch;
-  flex-direction: column;
-  margin-bottom: 4.46vw;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10.37vw;
 }
 
 .inspiredText{
@@ -377,78 +470,104 @@ input::placeholder{
   margin-bottom:3.3vw;
 }
 
-.inspiredText h1{
+.inspiredText .insiperTextImage{
+  background-image: url('img/INSPIRED.png');
+  width: 26vw;
+  height: 5vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   margin: 0;
-  margin-top: 3.34vw;
+  margin-top: 2.592vw;
   margin-bottom: 2vw;
-  font-size: 3vw;
-  font-weight: 900;
+  margin-left: -0.5vw;
 }
 
 .inspiredText p{
-  color: rgb(54,112,87);
-  line-height: 2.1vw;
-  font-size: 1.19vw;
+  color: black;
+  line-height: 2vw;
+  font-size: 1.55vw;
   margin: 0;
 }
 
 .twenty{
-  color: rgb(54,112,87);
-  position: relative;
-  margin-top: 1.8vw;
+  position: absolute;
+  bottom: 2.592vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .imgTwenty{
   padding-top: 2.6vw;
+  position: relative;
+  top:1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .imgTwenty p{
+  color: black;
   font-size: 0.9vw;
   font-weight: 400;
 }
 
 .buttonsTwenty{
   width: 35vw;
-  padding-right: 3.57vw;
+  padding-right: 5.55vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .buttonsTwenty button:hover{
   color:#0f967f;
-  background-color: white;
-  border: 1px solid #0f967f;
+  background-color: rgb(215,252,149);
+  border: 1px solid white;
 }
 
 .btnOne{
-  background-color: #0f967f;
-  color:white;
-  border-radius: 1vw;
+  border: 1px solid white;
+  background-color: rgb(205,242,139);
+  color:black;
   font-weight: bold;
   font-size: 2vw;
-  height: 3.85vw;
-  margin-bottom: 1.64vw;
-  width: 15.86vw;
+  height: 4.44vw;
+  margin-bottom: 1.03vw;
+  width: 23.11vw;
 }
 .btnTwo{
-  background-color: #0f967f;
-  color:white;
-  border-radius: 1vw;
+  border: 1px solid white;
+  background-color: rgb(205,242,139);
+  color:black;
   font-weight: bold;
   font-size: 1.9vw;
-  height: 3.85vw;
-  width: 20.7vw;
+  height: 4.44vw;
+  width: 23.11vw;
 }
 
 .imgTwenty img{
-  height: 3vw;
-  width: 15vw;
+  margin-top: 1vw;
+  margin-left: -3vw;
+  margin-right: 1vw;
+  height: 5vw;
+  width: 11vw;
 }
 /*inspired pain end*/
 /* newCarousel newCarousel */
@@ -478,6 +597,8 @@ input::placeholder{
 .carBox{
   /* display: none; */
   opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   left: 0px;
   top: 0px;
@@ -509,12 +630,16 @@ input::placeholder{
 }
 .rightArrowBox{
   right: 0px;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .arrow{
   position: relative;
   left: 0.8vw;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   width: 1.5vw;
   height: 1.5vw;
   border: 0.3vw solid rgb(173,230,221);
@@ -546,16 +671,24 @@ input::placeholder{
 }
 
 .tags{
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
   position: relative;
   left: 0;
   height: 6vw;
   width: 91vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tags div{
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   opacity: 0.8;
 }
@@ -640,10 +773,19 @@ input::placeholder{
   background-image: url('img/twitterbg.png');
   background-size: 100% 100%;
   height: 29.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
 }
 
@@ -665,9 +807,14 @@ input::placeholder{
   overflow-y: scroll;
   font-size:1.4vw;
   line-height: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow-x: hidden;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .scrollDiv a{
@@ -735,7 +882,9 @@ footer a{
 }
 .toTopArrowInner{
   top: 1vw;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   position: relative;
   border: 0.3vw solid white;
   width: 2.6vw;
@@ -759,17 +908,25 @@ footer a{
     padding-left: 20.35%;
     padding-right: 20.35%;
     height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     display: none;
   }
 
   #navBarDesktop a{
     color:#0f967f;
     text-decoration: none;
-    font-weight: 900;
     font-size: 4.8vw;
     margin-bottom: 2vw;
   }
@@ -781,8 +938,11 @@ footer a{
   #navBarMobile{
     display: block;
     min-height: 7vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 
   #navBarMobile a{
@@ -811,6 +971,8 @@ footer a{
       height: 0.7vw;
       background-color: #0f967f;
       margin: 1vw 0;
+      -webkit-transition: 0.4s;
+      -o-transition: 0.4s;
       transition: 0.4s;
   }
   /*logo*/
@@ -869,30 +1031,47 @@ footer a{
   }
   .sectionOne{
     height: auto;
+    display: -ms-grid;
     display: grid;
     grid-auto-rows: 1fr 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
   }
   .picOne{
     margin: 0;
+    -ms-grid-row:1;
+    -ms-grid-row-span:1;
     grid-row:1/2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
   }
 
   .picTwo{
     margin: 0;
+    -ms-grid-row:2;
+    -ms-grid-row-span:1;
     grid-row:2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
   }
 
   .picThree{
+    -ms-grid-row:3;
+    -ms-grid-row-span:1;
     grid-row:3/4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
   }
 
   .picFour{
     margin: 0;
+    -ms-grid-row:4;
+    -ms-grid-row-span:1;
     grid-row:4/5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
   }
 
@@ -938,15 +1117,20 @@ footer a{
   }
   .arrow{
     left: 1.6vw;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
     width: 3vw;
     height: 3vw;
     border: 0.6vw solid rgb(173,230,221);
   }
   /*inspired*/
+  .sectionInspired{
+    height: auto;
+  }
 
   .inspiredText{
-    margin-bottom:1.8vw;
+    margin-bottom:15vw;
   }
 
   .inspiredText h1{
@@ -991,7 +1175,10 @@ footer a{
 
   .scrollDiv{
     font-size:1.8vw;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     line-height: 3vw;
     width: 50vw;
   }
@@ -1012,4 +1199,10 @@ footer a{
     font-size: 2vw;
   }
 
+}
+
+@-moz-document url-prefix() {
+  .sectionOne div{
+    min-height: 25vh;
+  }
 }
