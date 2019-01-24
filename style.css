@@ -834,8 +834,7 @@ input::placeholder{
 
 .scrollDiv{
   color:white;
-  min-height: 250px;
-  /* height: 15.02vw; */
+  height: 12.02vw;
   width: 68vw;
   overflow-y: scroll;
   font-size:1.4vw;
