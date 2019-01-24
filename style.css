@@ -799,9 +799,12 @@ input::placeholder{
 /*tags end*/
 /* three div car that looks like crap */
 .threeDivPic{
+  padding-top: 2vw;
+  padding-bottom: 2vw;
   background-image: url('img/twitterbg.png');
-  background-size: 100% 100%;
-  height: 29.5vw;
+  background-size: 100% 130%;
+  background-position: 0 20%;
+  min-height: 8.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -821,7 +824,7 @@ input::placeholder{
 .fa{
   font-size:36px;
   color:white;
-  margin-bottom: 2vw;
+  margin-bottom: 1.5vw;
 }
 
 .fa:hover{
@@ -831,8 +834,8 @@ input::placeholder{
 
 .scrollDiv{
   color:white;
-  height: 17.02vw;
-  width: 92vw;
+  height: 12.02vw;
+  width: 68vw;
   overflow-y: scroll;
   font-size:1.4vw;
   line-height: 2vw;
@@ -846,7 +849,13 @@ input::placeholder{
           user-select: none;
 }
 
+.scrollDiv p{
+  font-size: 16px;
+  line-height: 27px;
+}
+
 .scrollDiv a{
+  font-size: 16px;
   color:#2ec4aa;
 }
 .scrollDiv a:hover{
@@ -856,7 +865,7 @@ input::placeholder{
 
 .scrollOne{
   text-align: center;
-  min-width: 28vw;
+  min-width: 20vw;
   margin-left: 1vw;
   margin-right: 1.2vw;
 }
