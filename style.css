@@ -353,8 +353,9 @@ header button:hover{
   text-align: center;
 }
 .getStartedNowBox button{
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
-  font-size: 2.1vw;
+  font-size: 2.2vw;
   background-color: white;
   border: 1px solid var(--main-color);
   width: 24.44vw;
@@ -419,9 +420,9 @@ input::placeholder{
 .sectionRiskRightForm button{
   width: 25vw;
   height: 4vw;
-  background-color: rgb(228,237,22);
+  background-color: rgb(205,242,139);
   border: none;
-  color: #555555;
+  color: black;
   font-size: 1.5vw;
   margin-top: 1.5vw;
   font-weight: 600;
@@ -566,6 +567,7 @@ input::placeholder{
 }
 
 .btnOne{
+  font-family: 'Raleway', sans-serif;
   border: 1px solid white;
   background-color: rgb(205,242,139);
   color:black;
@@ -576,6 +578,7 @@ input::placeholder{
   width: 23.11vw;
 }
 .btnTwo{
+  font-family: 'Raleway', sans-serif;
   border: 1px solid white;
   background-color: rgb(205,242,139);
   color:black;
