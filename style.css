@@ -833,6 +833,7 @@ input::placeholder{
 }
 
 .scrollDiv{
+  padding-top: 2vw;
   color:white;
   height: 12.02vw;
   width: 68vw;
