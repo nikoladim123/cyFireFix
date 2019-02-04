@@ -419,7 +419,6 @@ input::placeholder{
 }
 .sectionRiskRightForm button{
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
   width: 25vw;
   height:  4.44vw;
   background-color: rgb(205,242,139);
@@ -427,7 +426,7 @@ input::placeholder{
   color: black;
   font-size: 2vw;
   margin-top: 1.5vw;
-  font-weight: 600;
+  font-weight: 800;
   border: 1px solid white;
 }
 .sectionRiskRightForm button:hover{
@@ -574,7 +573,7 @@ input::placeholder{
   border: 1px solid white;
   background-color: rgb(205,242,139);
   color:black;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 2vw;
   height: 4.44vw;
   margin-bottom: 1.03vw;
@@ -585,7 +584,7 @@ input::placeholder{
   border: 1px solid white;
   background-color: rgb(205,242,139);
   color:black;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 1.9vw;
   height: 4.44vw;
   width: 23.11vw;
